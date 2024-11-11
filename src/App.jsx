@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./assets/App.css";
+import "./assets/app";
 
 const App = () => {
   // State variables for user inputs
