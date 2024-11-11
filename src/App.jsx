@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./assets/App.css";
 
 const App = () => {
   // State variables for user inputs
@@ -53,39 +53,39 @@ const App = () => {
       <h1>Compound Interest Calculator</h1>
       <div className="input-container">
         <label>
-          Deposit Amount: 
-          <input 
-            type="number" 
-            value={deposit} 
-            onChange={(e) => setDeposit(e.target.value)} 
-            placeholder="Enter deposit" 
+          Deposit Amount:
+          <input
+            type="number"
+            value={deposit}
+            onChange={(e) => setDeposit(e.target.value)}
+            placeholder="Enter deposit"
           />
         </label>
         <label>
-          Days: 
-          <input 
-            type="number" 
-            value={days} 
-            onChange={(e) => setDays(e.target.value)} 
-            placeholder="Enter days" 
+          Days:
+          <input
+            type="number"
+            value={days}
+            onChange={(e) => setDays(e.target.value)}
+            placeholder="Enter days"
           />
         </label>
         <label>
-          Daily Profit (%): 
-          <input 
-            type="number" 
-            value={dailyProfit} 
-            onChange={(e) => setDailyProfit(e.target.value)} 
-            placeholder="Enter daily profit percentage" 
+          Daily Profit (%):
+          <input
+            type="number"
+            value={dailyProfit}
+            onChange={(e) => setDailyProfit(e.target.value)}
+            placeholder="Enter daily profit percentage"
           />
         </label>
         <label>
-          Commission on Profit (%): 
-          <input 
-            type="number" 
-            value={commission} 
-            onChange={(e) => setCommission(e.target.value)} 
-            placeholder="Enter commission percentage" 
+          Commission on Profit (%):
+          <input
+            type="number"
+            value={commission}
+            onChange={(e) => setCommission(e.target.value)}
+            placeholder="Enter commission percentage"
           />
         </label>
         <button onClick={calculateProfit}>Calculate</button>
@@ -94,10 +94,18 @@ const App = () => {
       {finalBalance !== null && (
         <div className="results">
           <h3>Results:</h3>
-          <p><strong>Final Balance:</strong> ${finalBalance}</p>
-          <p><strong>Total Profit:</strong> ${totalProfit}</p>
-          <p><strong>Profit Percentage:</strong> {profitPercentage}%</p>
-          <p><strong>Commission Amount:</strong> ${commissionAmount}</p>
+          <p>
+            <strong>Final Balance:</strong> ${finalBalance}
+          </p>
+          <p>
+            <strong>Total Profit:</strong> ${totalProfit}
+          </p>
+          <p>
+            <strong>Profit Percentage:</strong> {profitPercentage}%
+          </p>
+          <p>
+            <strong>Commission Amount:</strong> ${commissionAmount}
+          </p>
         </div>
       )}
     </div>
